@@ -513,6 +513,11 @@ UDialogueVoice* USUDSDialogue::GetTargetVoice() const
 	
 }
 
+USoundBase* USUDSDialogue::GetSound(bool bAllowAnyTarget) const
+{
+	return GetSoundForCurrentLine(bAllowAnyTarget);
+}
+
 USoundBase* USUDSDialogue::GetSoundForCurrentLine(bool bAllowAnyTarget) const
 {
 	// UDialogueWave's contexts have both speakers and targets, but the GetWaveFromContext method is too restrictive

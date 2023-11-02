@@ -304,6 +304,9 @@ public:
 	/// Get the Dialogue Voice belonging to the named participant, if voiced (Null otherwise)
 	UFUNCTION(BlueprintCallable, Category="SUDS|Dialogue")
 	UDialogueVoice* GetVoice(FString Name) const;
+
+	UFUNCTION(BlueprintCallable, Category = "SUDS|Dialogue")
+	USoundBase* GetSound(bool bLooselyMatchTarget = true) const;
 	
 	/** If the current line is voiced, plays it in 2D.
 	 * @param VolumeMultiplier A linear scalar multiplied with the volume, in order to make the sound louder or softer.
